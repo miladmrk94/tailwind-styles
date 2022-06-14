@@ -1,16 +1,16 @@
-import "./App.css";
+import React, { useState } from "react";
+import Selector from "./Styles/Selector";
 
-function App() {
+export default function App() {
+  const [showItem, setShowItem] = useState();
+  const sortHandler = () => {
+    setShowItem(!showItem);
+  };
   return (
-    <div className="App">
-      <h3 className="bg-blue-100 p-4 border-2  border-green-700 m-5 rounded-lg font-bold hover:bg-red-600 disabled:bg-slate-300 ">
-        salam
-      </h3>
-      <button className="bg-green-600 sm:bg-red-600 md:bg-blue-600 disabled:bg-slate-400 rounded-lg  px-11 py-3 ">
-        OK
-      </button>
+    <div className="w-screen h-screen flex flex-col justify-center items-center">
+      <h3>milasd </h3>
+      <p>miaasdasd aksjdhasd anbskjdhjkasn dajkshdjkasd</p>
+      <Selector />
     </div>
   );
 }
-
-export default App;
