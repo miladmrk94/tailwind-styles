@@ -1,16 +1,19 @@
 import React, { useState } from "react";
-import Selector from "./Styles/Selector";
+import Dropdown from "./Styles/Dropdown";
 
 export default function App() {
-  const [showItem, setShowItem] = useState();
-  const sortHandler = () => {
-    setShowItem(!showItem);
-  };
+  const [selected, setSelected] = useState("Choose...");
+  console.log(selected);
+  const options = ["React", "Vue", "Next"];
   return (
     <div className="w-screen h-screen flex flex-col justify-center items-center">
-      <h3>milasd </h3>
-      <p>miaasdasd aksjdhasd anbskjdhjkasn dajkshdjkasd</p>
-      <Selector />
+      <Dropdown
+        //need useState for selected & setSelected
+        // options array list
+        selected={selected}
+        setSelected={setSelected}
+        Items={options}
+      />
     </div>
   );
 }
